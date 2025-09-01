@@ -12,7 +12,7 @@ Funktionen:
 - Speicherung des Fortschritts im localStorage
 
 Techstack:
-- Frontend: Vue 3, SCSS mit Variable Fonts, Font Awesome
+- Frontend: Vue 3, Bootstrap 5, SCSS
 - Audio: Web Audio API, Pitch-Shifting für Akkorde
 - State & Composables: Vue Ref & Computed für interaktive Komponenten
 - Persistenz: LocalStorage via StorageService
