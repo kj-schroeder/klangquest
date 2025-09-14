@@ -1,0 +1,145 @@
+// =========================
+// Container & Buttons
+// =========================
+#header {
+  .iconButton {
+    font-size: 1.25rem;
+    aspect-ratio: 1 / 1;
+    width: 3rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: $dark;
+    border: $dark 1px solid;
+
+    i {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      background-color: rgba($dark, 0.35);
+      color: $light;
+      border: $light 1px solid;
+    }
+  }
+}
+
+#challengeContainer {
+  font-size: 1.25rem;
+
+  .selectNoteButton,
+  .solutionButton,
+  .solutionToggleBtn,
+  .iconButton,
+  .btn {
+    font-size: 1.25rem;
+    aspect-ratio: 1 / 1;
+    width: 3rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  th {
+    font-weight: 500;
+  }
+}
+
+.toggleBtnContainer {
+  display: inline-block;
+}
+
+// =========================
+// Spezielle Buttons
+// =========================
+.solutionToggleBtn {
+  background-color: $grayblue;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  svg {
+    width: 32px;
+    height: 32px;
+
+    .bulb {
+      fill: #FFF;
+      transition:
+        fill 0.3s ease,
+        filter 0.3s ease;
+    }
+
+    .light-rays {
+      stroke: $yellowish;
+      stroke-width: 20;
+      stroke-linecap: round;
+      fill: none;
+      opacity: 0;
+      transition:
+        opacity 0.3s ease,
+        filter 0.3s ease;
+    }
+  }
+
+  &:hover:not(.active),
+  &:active:not(.active) {
+    background-color: darken($grayblue, 5%);
+    .bulb {
+      fill: $yellowish;
+    }
+  }
+
+  &.active {
+    background-color: $grayblue;
+
+    .bulb {
+      fill: $yellowish;
+    }
+
+    .light-rays {
+      opacity: 1;
+    }
+
+    &:hover,
+    &:active {
+      background-color: darken($grayblue, 5%);
+      .bulb {
+        filter: drop-shadow(0 0 6px $yellowish);
+      }
+      .light-rays {
+        filter: drop-shadow(0 0 6px $yellowish);
+      }
+    }
+  }
+}
+
+.btn-success-half {
+  background-color: rgba(25, 135, 84, 0.5); /* Bootstrap grün mit 50% */
+  border-color: rgba(25, 135, 84, 0.5);
+  color: inherit;
+}
+
+.btn-danger-half {
+  background-color: rgba(220, 53, 69, 0.5); /* Bootstrap rot mit 50% */
+  border-color: rgba(220, 53, 69, 0.5);
+  color: inherit;
+}
+
+.solutionButton {
+  pointer-events: none; /* Klicks deaktivieren */
+  opacity: 1; /* nicht ausgegraut */
+
+  &:hover,
+  &:focus {
+    background-color: inherit !important; /* keine Farbänderung */
+    color: inherit !important;
+    border-color: inherit !important;
+    box-shadow: none !important;
+  }
+}

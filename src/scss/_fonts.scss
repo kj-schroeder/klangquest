@@ -1,0 +1,19 @@
+// =========================
+// Fonts & Icons
+// =========================
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("./../../public/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("./../../public/fonts/Roboto_Condensed/RobotoCondensed-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}

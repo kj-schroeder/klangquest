@@ -1,0 +1,21 @@
+// =========================
+// Bootstrap Konfiguration
+// =========================
+$primary: $grayblue !default;
+$secondary: $lightgray !default;
+$info: $yellowish !default;
+$light: $offwhite !default;
+$dark: $grayblue !default;
+
+@import "~/bootstrap/scss/functions";
+@import "~/bootstrap/scss/variables";
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "custom-yellow": $yellowish
+  )
+);
+
+@import "~/bootstrap/scss/mixins";
+@import "~/bootstrap/scss/bootstrap";

@@ -1,0 +1,29 @@
+// =========================
+// Modals
+// =========================
+#selectNoteModal {
+  .modal-dialog {
+    max-width: 270px;
+    margin: auto;
+  }
+
+  .modal-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+
+    .btn {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .modal-title {
+    font-size: 1.5rem; 
+  }
+}

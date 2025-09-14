@@ -1,0 +1,42 @@
+// =========================
+// Variants & Mixins
+// =========================
+@mixin custom-table-variant($state, $background, $color: #fff) {
+  @include table-variant($state, $background);
+  --#{$variable-prefix}table-color: #{$color};
+}
+
+.table-primary {
+  @include custom-table-variant("primary", $offwhite, $grayblue);
+}
+
+.btn-custom-yellow {
+  @include button-variant($yellowish, $yellowish, $grayblue);
+}
+
+.btn-lightgray,
+.btn-secondary {
+  @include button-variant($lightgray, $lightgray, $grayblue);
+}
+
+@mixin modal-variant($name, $bg-color, $text-color: #fff) {
+  .modal-#{$name} {
+    .modal-content {
+      background-color: $bg-color;
+      color: $text-color;
+    }
+
+    .modal-header,
+    .modal-footer {
+      border-color: darken($bg-color, 10%);
+    }
+
+    .modal-title,
+    .btn-close {
+      color: $text-color;
+    }
+  }
+}
+
+@include modal-variant("light", $offwhite, $grayblue);
+
