@@ -1,6 +1,6 @@
 # KlangQuest
 
-![Screenshot der KlangQuest AkkordChallenge im Browser](public/images/KlangQuest_Screenshot "KlangQuest AkkordChallenge im Browser")
+![Screenshot der KlangQuest AkkordChallenge im Browser](public/images/KlangQuest_Screenshot.png "KlangQuest AkkordChallenge im Browser")
 
 ## KlangQuest (Demo)
 
